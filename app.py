@@ -175,6 +175,9 @@ if user_menu == 'Country-wise Analysis':
         st.table(dataframe1)
 
 if user_menu == 'Athlete-wise Analysis':
+    st.title('Athlete-wise Analysis')
+    st.write("")
+    st.write("")
     st.header('Athlete Age Distribution across Olympics')
     x1,x2,x3,x4=helper.get_age_distribution(df)
     fig = ff.create_distplot([x1.dropna(), x2['Age'].dropna(), x3['Age'].dropna(), x4['Age'].dropna()],
